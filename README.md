@@ -11,4 +11,7 @@
 2. setup eazybank (Spring Security Zero to Master)
 
 	scenario: eazybank initial controller setup
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/7506eac230745e669e9570b20001aebb6396a92b
+	
+	scenario: Custom request configuration as per our requirement
 	commits: 

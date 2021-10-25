@@ -38,6 +38,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
         http.authorizeRequests(requests -> requests.anyRequest().authenticated());
+        http.formLogin();
         http.httpBasic();
     }
 

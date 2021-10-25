@@ -28,3 +28,6 @@ hs_err_pid*
 /eazybank/.mvn
 /eazybank/mvnw
 /eazybank/mvnw.cmd
+/springsecuritybasictwo/.mvn
+/springsecuritybasictwo/mvnw
+/springsecuritybasictwo/mvnw.cmd

@@ -21,5 +21,8 @@
 	scenario: Basic simple spring security application with spring username password two
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/ade2c9eac08bb6f2616a33106c19895cdd3e79df
 	
-	scenario: craete custom AuthenticationManager
+	scenario: create custom AuthenticationManager
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/d7bf52b32a39a134a3b70b0821bc08e863541c73
+	
+	scenario: create custom AuthenticationProvider
 	commits: 

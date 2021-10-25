@@ -18,5 +18,8 @@
 	
 3. product coupon service (Spring Security Fundamentals (OAuth ,JWT,CSRF and more)
 
-	scenario: 
+	scenario: Basic simple spring security application with spring username password two
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/ade2c9eac08bb6f2616a33106c19895cdd3e79df
+	
+	scenario: craete custom AuthenticationManager
 	commits: 

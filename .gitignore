@@ -37,3 +37,9 @@ hs_err_pid*
 /productcoupon/productservice/.mvn
 /productcoupon/productservice/mvnw
 /productcoupon/productservice/mvnw.cmd
+.mvn
+/productcoupon/couponservice/mvnw
+/productcoupon/couponservice/mvnw.cmd
+.mvn
+/productcoupon/productservice/mvnw.cmd
+/productcoupon/productservice/mvnw

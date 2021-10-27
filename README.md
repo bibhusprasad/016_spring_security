@@ -33,4 +33,7 @@
 4. product coupon service (Spring Security Fundamentals (OAuth ,JWT,CSRF and more)
 
 	scenario: create coupon rest service
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/92a8045bbe92619de0ede8742c188273d04f9d21
+	
+	scenario: create product rest service
 	commits: 

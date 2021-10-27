@@ -6,3 +6,10 @@ create table coupon(
 	discount NUMERIC(5, 2),
 	exp_date VARCHAR(50)
 );
+
+create table product(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(20),
+	description VARCHAR(100),
+	price NUMERIC(8,3)
+);

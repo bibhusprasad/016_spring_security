@@ -31,3 +31,6 @@ hs_err_pid*
 /springsecuritybasictwo/.mvn
 /springsecuritybasictwo/mvnw
 /springsecuritybasictwo/mvnw.cmd
+/productcoupon/couponservice/.mvn
+/productcoupon/couponservice/mvnw
+/productcoupon/couponservice/mvnw.cmd

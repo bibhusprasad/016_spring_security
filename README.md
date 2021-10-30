@@ -30,7 +30,7 @@
 	scenario: form based login
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/f81ea725eaf61ba2ffd48899315f354c77060457
 
-4. product coupon service (Spring Security Fundamentals (OAuth ,JWT,CSRF and more)
+4. product coupon service secure rest api(Spring Security Fundamentals (OAuth ,JWT,CSRF and more)
 
 	scenario: create coupon rest service
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/92a8045bbe92619de0ede8742c188273d04f9d21
@@ -42,4 +42,9 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/3c7d56d7f721dd74616f479776afc876aed98240
 	
 	scenario: Implement spring security user and role details
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/7a3ebad4bcf9e55e71c96b9942d2a3e79c073fee
+	
+4. product coupon service secure web application(Spring Security Fundamentals (OAuth ,JWT,CSRF and more)
+	
+	scenario: secure spring web application using thymeleaf
 	commits: 

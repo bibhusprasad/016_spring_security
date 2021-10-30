@@ -11,3 +11,5 @@ spring:
     properties:
       hibernate:
         default_schema: productcoupon
+  thymeleaf:
+    cache: false

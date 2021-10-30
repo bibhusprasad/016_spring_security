@@ -11,3 +11,6 @@ spring:
     properties:
       hibernate:
         default_schema: productcoupon
+
+couponService:
+  url: http://localhost:8080/couponapi/coupons/

@@ -36,4 +36,7 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/92a8045bbe92619de0ede8742c188273d04f9d21
 	
 	scenario: create product rest service
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/b32d44c2ed09dc006036686ed8a98689cf1d65d9
+	
+	scenario: Integrate product and coupon microservices
 	commits: 

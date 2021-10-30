@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Product {
@@ -16,6 +17,8 @@ public class Product {
     private String name;
     private String description;
     private BigDecimal price;
+    @Transient
+    private String couponCode;
 
     public Product() {
     }
@@ -56,5 +59,13 @@ public class Product {
 
     public void setPrice(final BigDecimal price) {
         this.price = price;
+    }
+
+    public String getCouponCode() {
+        return this.couponCode;
+    }
+
+    public void setCouponCode(final String couponCode) {
+        this.couponCode = couponCode;
     }
 }

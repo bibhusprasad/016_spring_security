@@ -39,4 +39,7 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/b32d44c2ed09dc006036686ed8a98689cf1d65d9
 	
 	scenario: Integrate product and coupon microservices
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/3c7d56d7f721dd74616f479776afc876aed98240
+	
+	scenario: Implement spring security user and role details
 	commits: 

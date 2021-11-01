@@ -47,4 +47,17 @@
 4. product coupon service secure web application(Spring Security Fundamentals (OAuth ,JWT,CSRF and more)
 	
 	scenario: secure spring web application using thymeleaf
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/5135953d5f91af9cdb89823ae218912bbaff8173
+	
+5. Eazybank (Spring Security Zero to Master)	
+	
+	scenario: Configuring users using inMemoryAuthentication
+			  Configuring users using InMemoryUserDetailsManager
 	commits: 
+	
+	
+	
+	
+	
+	
+	

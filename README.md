@@ -69,8 +69,12 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/beb0f04b658cc87cb9d57a0e07d94a07c3470311
 	
 	scenario: Implementing and Customizing the Authentication Provider inside our application
-	commits: 
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/071acced3c215522bf277459f95d2eb152dfaa30
 	
+6. CORS and CSRF
+	
+	scenario: setup ui for CORS and CSRF. bank-app-ui (Spring Security Zero to Master)
+	commits: 
 	
 	
 	

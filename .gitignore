@@ -43,3 +43,5 @@ hs_err_pid*
 .mvn
 /productcoupon/productservice/mvnw.cmd
 /productcoupon/productservice/mvnw
+/bank-app-ui/node_modules
+/bank-app-ui/node_modules

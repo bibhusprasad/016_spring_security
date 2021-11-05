@@ -24,3 +24,10 @@ CREATE TABLE customer(
 )
 
 INSERT INTO customer(email, pwd, role) VALUES ('jogndoe@example.com', '54321', 'admin');
+
+#BCryptPasswordEncoder
+
+#https://bcrypt-generator.com/
+#12345 TO $2a$12$2f.HgyFG16BIL/oH439s7uAwp5/9uiP7PIZefyIDMk40dVo2H.c7u
+
+INSERT INTO customer(email, pwd, role) VALUES ('happy@example.com', '$2a$12$2f.HgyFG16BIL/oH439s7uAwp5/9uiP7PIZefyIDMk40dVo2H.c7u', 'admin');

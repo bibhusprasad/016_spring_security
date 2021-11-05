@@ -1,15 +1,15 @@
 package com.bibhu.eazybank.config;
 
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 @Configuration
 public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -55,7 +55,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
         http.httpBasic();
     }
 
-    //InMemoryAuthentication
+    //Note: Configuring users using inMemoryAuthentication
     /**
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
@@ -69,7 +69,8 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
     }
     */
 
-    //InMemoryUserDetailsManager
+    //Note: Configuring users using InMemoryUserDetailsManager
+    /**
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         final InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
@@ -78,6 +79,13 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
         userDetailsService.createUser(user1);
         userDetailsService.createUser(user2);
         auth.userDetailsService(userDetailsService);
+    }
+    */
+
+    //Using JdbcUserDetailsManager to perform authentication
+    @Bean
+    public UserDetailsService userDetailsService(final DataSource dataSource){
+        return new JdbcUserDetailsManager(dataSource);
     }
 
     @Bean

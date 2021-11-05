@@ -53,6 +53,9 @@
 	
 	scenario: Configuring users using inMemoryAuthentication
 			  Configuring users using InMemoryUserDetailsManager
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/103e46b756ce7edecc2e56bf9bcc383600e80060
+	
+	scenario: Using JdbcUserDetailsManager to perform authentication
 	commits: 
 	
 	

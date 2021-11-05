@@ -56,6 +56,9 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/103e46b756ce7edecc2e56bf9bcc383600e80060
 	
 	scenario: Using JdbcUserDetailsManager to perform authentication
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/928ddf124d6594b8c47772d37c0221caae50e834
+	
+	scenario: Creating our own custom implementation of UserDetailsService
 	commits: 
 	
 	

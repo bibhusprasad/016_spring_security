@@ -59,6 +59,9 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/928ddf124d6594b8c47772d37c0221caae50e834
 	
 	scenario: Creating our own custom implementation of UserDetailsService
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/a372a79a495cc5ea79255c73a32f7c6d3f11d757
+	
+	scenario: Password Management with Password Encoders : NoOpPasswordEncoder
 	commits: 
 	
 	

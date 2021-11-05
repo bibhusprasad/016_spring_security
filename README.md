@@ -66,6 +66,9 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/b2cd9b8f823c5a9ac3c2aa92e7bab2e7c1a7b950
 	
 	scenario: Password Management with Password Encoders : BCryptPasswordEncoder
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/beb0f04b658cc87cb9d57a0e07d94a07c3470311
+	
+	scenario: Implementing and Customizing the Authentication Provider inside our application
 	commits: 
 	
 	

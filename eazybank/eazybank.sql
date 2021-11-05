@@ -14,3 +14,13 @@ create table authorities(
 
 INSERT INTO users(username, PASSWORD, enabled) VALUES ('happy', '12345', 1);
 INSERT INTO authorities (username, authority) VALUES ('happy', 'write');
+
+#CREATE users AND customer table
+CREATE TABLE customer(
+	id SERIAL PRIMARY KEY,
+	email VARCHAR(25),
+	pwd VARCHAR(255),
+	role VARCHAR(25)
+)
+
+INSERT INTO customer(email, pwd, role) VALUES ('jogndoe@example.com', '54321', 'admin');

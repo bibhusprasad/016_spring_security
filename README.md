@@ -83,5 +83,8 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/0392a54b7fd40fa3c3a4083f9a2ed780d0359af5
 	
 	scenario: resolve CSRF issue
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/2364c7e7f812c135b371627f7a8cb18a862db1c3
+	
+	scenario: Resolving CFRF error by generating a CSRF token
 	commits: 
 	

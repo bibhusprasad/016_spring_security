@@ -80,7 +80,8 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/b3bd99aaaae2f3a880eb14b673b412326978b12c
 	
 	scenario: resolve CORS issue
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/0392a54b7fd40fa3c3a4083f9a2ed780d0359af5
+	
+	scenario: resolve CSRF issue
 	commits: 
-	
-	
 	

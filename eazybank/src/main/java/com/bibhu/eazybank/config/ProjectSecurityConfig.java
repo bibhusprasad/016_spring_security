@@ -1,11 +1,17 @@
 package com.bibhu.eazybank.config;
 
+import java.util.Collections;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
 
 @Configuration
 public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -38,8 +44,19 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
         /**
          * Custom configuration as per our requirement
          */
-
-        http.authorizeRequests(requests ->
+        http.cors().configurationSource(new CorsConfigurationSource() {
+            @Override
+            public CorsConfiguration getCorsConfiguration(final HttpServletRequest request) {
+                final CorsConfiguration configuration = new CorsConfiguration();
+                configuration.setAllowedOrigins(Collections.singletonList("http://localhost:4200"));
+                configuration.setAllowedMethods(Collections.singletonList("*"));
+                configuration.setAllowCredentials(true);
+                configuration.setAllowedHeaders(Collections.singletonList("*"));
+                configuration.setMaxAge(3600L);
+                return configuration;
+            }
+        }).and().
+        authorizeRequests(requests ->
                 requests.antMatchers("/myAccount").authenticated()
                         .antMatchers("/myBalance").authenticated()
                         .antMatchers("/myLoans").authenticated()

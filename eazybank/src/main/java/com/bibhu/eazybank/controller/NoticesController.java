@@ -1,14 +1,28 @@
 package com.bibhu.eazybank.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.bibhu.eazybank.model.Notice;
+import com.bibhu.eazybank.repository.NoticeRepository;
 
 @RestController
 public class NoticesController {
 
+	@Autowired
+	private NoticeRepository noticeRepository;
+
 	@GetMapping("/notices")
-	public String getNotices(final String input) {
-		return "Here are the notices details from the DB";
+	public List<Notice> getNotices() {
+		final List<Notice> notices = this.noticeRepository.findAllActiveNotices();
+		if (notices != null ) {
+			return notices;
+		}else {
+			return null;
+		}
 	}
 
 }

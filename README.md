@@ -74,9 +74,10 @@
 6. CORS and CSRF
 	
 	scenario: setup ui for CORS and CSRF. bank-app-ui (Spring Security Zero to Master)
-	commits: 
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/5fbfa21112d07c24c5d92e8d2afebde0df6b80ff
 	
-	
+	scenario: setup backend for CORS and CSRF. bank-app-ui (Spring Security Zero to Master)
+	commits:
 	
 	
 	

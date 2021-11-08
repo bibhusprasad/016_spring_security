@@ -107,5 +107,8 @@
 	scenario: Adding a custom filter using addFilterBefore() method
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/dba48bd5bdfb01bc021a794969130e5a87d7e8e6
 	
-	scenario: 
+	scenario: Adding a custom filter using addFilterAfter() method
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/748a05c591f5b8bc32a1c377a3245a2d023fa8a8
+	
+	scenario: Adding a custom filter using addFilterAt() method
 	commits: 

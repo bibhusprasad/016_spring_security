@@ -102,4 +102,7 @@
 8. Filters in Spring Security (Spring Security Zero to Master)	
 
 	scenario: Inbuilt Filters provided by Spring Security
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/b498e3ca459ac56fc4a39d7411a6986548f270b8
+	
+	scenario: Adding a custom filter using addFilterBefore() method
 	commits: 

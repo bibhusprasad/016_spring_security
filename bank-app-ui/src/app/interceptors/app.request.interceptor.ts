@@ -19,6 +19,7 @@ export class XhrInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     let httpHeaders = new HttpHeaders();
     this.user = JSON.parse(sessionStorage.getItem('userdetails'));
+    //FOR custom Filter
     if (this.user && this.user.password && this.user.email) {
       httpHeaders = httpHeaders.append(
         'Authorization',

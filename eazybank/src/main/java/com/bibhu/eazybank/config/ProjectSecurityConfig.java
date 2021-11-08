@@ -15,6 +15,7 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
+import com.bibhu.eazybank.filter.AuthoritiesLoggingAfterFilter;
 import com.bibhu.eazybank.filter.RequestValidationBeforeFilter;
 
 @Configuration
@@ -59,8 +60,9 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 configuration.setMaxAge(3600L);
                 return configuration;
             }
-        }).and().csrf().ignoringAntMatchers("/contact").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-                .and().addFilterBefore(new RequestValidationBeforeFilter(), BasicAuthenticationFilter.class)
+        }).and().csrf().ignoringAntMatchers("/contact").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
+                .addFilterBefore(new RequestValidationBeforeFilter(), BasicAuthenticationFilter.class)
+                .addFilterAfter(new AuthoritiesLoggingAfterFilter(), BasicAuthenticationFilter.class)
         .authorizeRequests(requests ->
                 requests.antMatchers("/myAccount").hasRole("USER")
                         .antMatchers("/myBalance").hasAnyRole("USER", "ADMIN")

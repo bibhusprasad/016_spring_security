@@ -10,3 +10,11 @@ spring:
     properties:
       hibernate:
         default_schema: eazybank
+
+logging:
+  level:
+    org:
+      springframework:
+        security:
+          web:
+            FilterChainProxy: DEBUG

@@ -92,5 +92,9 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/e2bbf3b8f893a11ad28b2f42e0eb0d94e93c6ecd
 	
 7. Understanding & Implementing Authorization (Spring Security Zero to Master)	
+
 	scenario: Configuring Authorities in Spring Security
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/2690f3d4b82d69bc6f8f600041b937641fac470e
+	
+	scenario: Configuring Role in Spring Security
 	commits: 

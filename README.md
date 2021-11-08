@@ -71,7 +71,7 @@
 	scenario: Implementing and Customizing the Authentication Provider inside our application
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/071acced3c215522bf277459f95d2eb152dfaa30
 	
-6. CORS and CSRF
+6. CORS and CSRF (Spring Security Zero to Master)	
 	
 	scenario: setup ui for CORS and CSRF. bank-app-ui (Spring Security Zero to Master)
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/5fbfa21112d07c24c5d92e8d2afebde0df6b80ff
@@ -88,3 +88,9 @@
 	scenario: Resolving CFRF error by generating a CSRF token
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/31e36634e9bf710376d5283ab42bd439945a1b23
 	
+	scenario: Making Spring Security changes to make CSRF not applicable for a page
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/e2bbf3b8f893a11ad28b2f42e0eb0d94e93c6ecd
+	
+7. Understanding & Implementing Authorization (Spring Security Zero to Master)	
+	scenario: Configuring Authorities in Spring Security
+	commits: 

@@ -179,3 +179,20 @@ CREATE TABLE contact_messages (
   message varchar(2000) NOT NULL,
   create_dt date DEFAULT NULL
 );
+
+#Authentication and Authorisation
+
+DROP TABLE authorities;
+
+CREATE TABLE authorities (
+  id SERIAL PRIMARY KEY,
+  customer_id int NOT NULL,
+  name varchar(50) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customer (customer_id) ON DELETE CASCADE
+);
+
+INSERT INTO authorities (customer_id, name)
+ VALUES (1, 'READ');
+
+INSERT INTO authorities (customer_id, name)
+ VALUES (1, 'WRITE');

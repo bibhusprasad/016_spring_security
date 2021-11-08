@@ -1,10 +1,14 @@
 package com.bibhu.eazybank.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -24,17 +28,21 @@ public class Customer {
     private String role;
     @Column(name = "create_dt")
     private String createDt;
+    @JsonIgnore
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    private Set<Authority> authorities;
 
     public Customer() {
     }
 
-    public Customer(final String name, final String email, final String mobileNumber, final String pwd, final String role, final String createDt) {
+    public Customer(final String name, final String email, final String mobileNumber, final String pwd, final String role, final String createDt, final Set<Authority> authorities) {
         this.name = name;
         this.email = email;
         this.mobileNumber = mobileNumber;
         this.pwd = pwd;
         this.role = role;
         this.createDt = createDt;
+        this.authorities = authorities;
     }
 
     public int getId() {
@@ -91,5 +99,13 @@ public class Customer {
 
     public void setCreateDt(final String createDt) {
         this.createDt = createDt;
+    }
+
+    public Set<Authority> getAuthorities() {
+        return this.authorities;
+    }
+
+    public void setAuthorities(final Set<Authority> authorities) {
+        this.authorities = authorities;
     }
 }

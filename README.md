@@ -120,6 +120,9 @@
 	
 10. Method Level Security
 
-	scenario: 
+	scenario: Implementing method level security using preauthorize and postauthorize
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/41602dbe3f6f333423592c779568616c961adf85
+	
+	scenario: 086 Implementing method level security using prefilter and postfilter
 	commits: 
 	

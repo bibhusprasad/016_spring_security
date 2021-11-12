@@ -1,5 +1,6 @@
 package com.bibhu.eazybank.config;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,15 +9,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
 import com.bibhu.eazybank.filter.AuthoritiesLoggingAfterFilter;
 import com.bibhu.eazybank.filter.AuthoritiesLoggingAtFilter;
+import com.bibhu.eazybank.filter.JWTTokenGeneratorFilter;
+import com.bibhu.eazybank.filter.JWTTokenValidatorFilter;
 import com.bibhu.eazybank.filter.RequestValidationBeforeFilter;
 
 @Configuration
@@ -50,7 +53,8 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
         /**
          * Custom configuration as per our requirement
          */
-        http.cors().configurationSource(new CorsConfigurationSource() {
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+        .cors().configurationSource(new CorsConfigurationSource() {
             @Override
             public CorsConfiguration getCorsConfiguration(final HttpServletRequest request) {
                 final CorsConfiguration configuration = new CorsConfiguration();
@@ -58,12 +62,17 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 configuration.setAllowedMethods(Collections.singletonList("*"));
                 configuration.setAllowCredentials(true);
                 configuration.setAllowedHeaders(Collections.singletonList("*"));
+                configuration.setExposedHeaders(Arrays.asList("Authorization"));
                 configuration.setMaxAge(3600L);
                 return configuration;
             }
-        }).and().csrf().ignoringAntMatchers("/contact").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
+        }).and().csrf()
+                //.ignoringAntMatchers("/contact").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
+                .disable()
                 .addFilterBefore(new RequestValidationBeforeFilter(), BasicAuthenticationFilter.class)
                 .addFilterAfter(new AuthoritiesLoggingAfterFilter(), BasicAuthenticationFilter.class)
+                .addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class)
+                .addFilterAfter(new JWTTokenGeneratorFilter(), BasicAuthenticationFilter.class)
                 .addFilterAt(new AuthoritiesLoggingAtFilter(), BasicAuthenticationFilter.class)
         .authorizeRequests(requests ->
                 requests.antMatchers("/myAccount").hasRole("USER")

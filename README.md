@@ -111,4 +111,9 @@
 	commits: https://github.com/bibhusprasad/016_spring_security/commit/748a05c591f5b8bc32a1c377a3245a2d023fa8a8
 	
 	scenario: Adding a custom filter using addFilterAt() method
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/f56fa1b47331343499cf4faf2a285389651934d3
+	
+9. Token based Authentication using JSON Web Token (JWT) (Spring Security Zero to Master)
+	
+	scenario: 
 	commits: 

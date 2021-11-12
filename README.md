@@ -115,5 +115,11 @@
 	
 9. Token based Authentication using JSON Web Token (JWT) (Spring Security Zero to Master)
 	
+	scenario: Token based Authentication using JSON Web Token
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/b2f59b875fbd0844ec81b64412bc7dbf47b0cdcf
+	
+10. Method Level Security
+
 	scenario: 
 	commits: 
+	

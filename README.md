@@ -128,6 +128,6 @@
 	
 11. Deep dive of OAUTH2 (Spring Security Zero to Master)
 
-	scenario: implementation od oauth2
-	commits: 
+	scenario: implementation of oauth2
+	commits: https://github.com/bibhusprasad/016_spring_security/commit/e644737010a6c085f4f949dd0193c9810f2d058a
 	
